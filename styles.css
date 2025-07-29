@@ -1,0 +1,78 @@
+body{
+    background-image: url(star.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.moon{
+    height: 10vh;
+    position: absolute;
+    left: 50vw;
+    bottom: 25vh;
+    transform: translate(-50%, 0);
+    animation-name: moonOrbit;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 3;
+}
+
+.star{
+    height: 25vh;
+    position: absolute;
+    right: 90vw;
+    bottom: 60vh;
+    animation-name: slideLeft;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.earth{
+    height: 30vh;
+    position: absolute;
+    left: 50vw;
+    bottom: 55vh;
+    transform: translate(-50%, 0);
+    z-index: 2;
+}
+
+@keyframes ascendLeft {
+    0% { left: 90vw; bottom: 0; }
+    100% { left: 10vw; bottom: 80vh; }
+}
+
+
+@keyframes slideLeft {
+    0% { left: 90vw; }
+    100% { left: 10vw; }
+}
+
+@keyframes moonOrbit {
+    0% {
+        left: 50vw;
+        bottom: 55vh;
+        transform: translate(-50%, 0) rotate(0deg) translateX(18vh);
+    }
+    25% {
+        left: 50vw;
+        bottom: 55vh;
+        transform: translate(-50%, 0) rotate(90deg) translateX(18vh);
+    }
+    50% {
+        left: 50vw;
+        bottom: 55vh;
+        transform: translate(-50%, 0) rotate(180deg) translateX(18vh);
+    }
+    75% {
+        left: 50vw;
+        bottom: 55vh;
+        transform: translate(-50%, 0) rotate(270deg) translateX(18vh);
+    }
+    100% {
+        left: 50vw;
+        bottom: 55vh;
+        transform: translate(-50%, 0) rotate(360deg) translateX(18vh);
+    }
+}
+}
